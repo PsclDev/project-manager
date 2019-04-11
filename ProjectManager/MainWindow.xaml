@@ -25,9 +25,8 @@
                     <materialDesign:PackIcon Kind="DatabaseSearch" Height="25" Width="25"/>
                 </Button>
             </Grid>
-            
-            <StackPanel Height="50" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="Btn_NewProject" Content="New Project" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_NewProject_Click"/>
+
+            <StackPanel Height="50" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center">           
                 <Button x:Name="Btn_AddNote" Content="Add Note" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_AddNote_Click"/>
                 <Button x:Name="Btn_AddToDo" Content="Add ToDo" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_AddToDo_Click"/>
                 <Button x:Name="Btn_AddMeeting" Content="Add Meeting" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_AddMeeting_Click"/>
@@ -40,13 +39,50 @@
             <Grid Height="500">
                 <StackPanel Orientation="Horizontal">
                     <Grid Margin="15 0 0 0" Width="215">
-                        <ListView x:Name="ListView_Projects" Margin="5 36 5 5" Height="450">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn DisplayMemberBinding="{Binding Projects}" Header="Projects" Width="200"/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
+                        <materialDesign:DialogHost DialogClosing="DialogHost_DialogClosing" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:DialogHost.DialogContent>
+                                <StackPanel Margin="16">
+                                    <TextBlock>
+                                        Add a new Project.
+                                    </TextBlock>
+                                    <TextBox Margin="0 8 0 0" HorizontalAlignment="Stretch" x:Name="ProjectTextBox" />
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <Button Style="{StaticResource MaterialDesignFlatButton}" IsDefault="True" Margin="0 8 8 0" Command="materialDesign:DialogHost.CloseDialogCommand">
+                                            <Button.CommandParameter>
+                                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                                    True
+                                                </system:Boolean>
+                                            </Button.CommandParameter>
+                                            ACCEPT
+                                        </Button>
+                                        <Button Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True" Margin="0 8 8 0" Command="materialDesign:DialogHost.CloseDialogCommand">
+                                            <Button.CommandParameter>
+                                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                                    False
+                                                </system:Boolean>
+                                            </Button.CommandParameter>
+                                            CANCEL
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </materialDesign:DialogHost.DialogContent>
+                            <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueMidBrush}" MinWidth="215" MinHeight="500" ClipToBounds="True">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <ListBox x:Name="ProjectsListBox">
+                                    </ListBox>
+                                    <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
+                                        <TextBlock Margin="16" Text="Projects"/>
+                                    </materialDesign:ColorZone>
+                                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                                        <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" Foreground="White"/>
+                                    </Button>
+                                </Grid>
+                            </Border>
+                        </materialDesign:DialogHost>
                     </Grid>
 
                     <Grid Margin="15 0 0 0" Width="820">
@@ -59,9 +95,14 @@
 
                             <ListView x:Name="ListView_Main" Margin="10" Height="450">
                                 <ListView.View>
-                                    <GridView>
-                                        <GridViewColumn DisplayMemberBinding="{Binding OldName}" Header="Field 1" Width="400"/>
-                                        <GridViewColumn DisplayMemberBinding="{Binding NewName}" Header="Field 2" Width="400"/>
+                                    <GridView x:Name="GridView_Main">
+                                        <GridViewColumn x:Name="GridViewColumnField1" DisplayMemberBinding="{Binding OldName}" Width="400">
+                                            <GridViewColumnHeader Content="{Binding Path=Field1Name}"/>
+                                        </GridViewColumn>
+
+                                        <GridViewColumn x:Name="GridViewColumnField2" DisplayMemberBinding="{Binding NewName}" Width="400">
+                                            <GridViewColumnHeader Content="{Binding Field2Name}"/>
+                                        </GridViewColumn>
                                     </GridView>
                                 </ListView.View>
                             </ListView>

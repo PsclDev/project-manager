@@ -46,11 +46,6 @@ namespace ProjectManager
             if (e.LeftButton == MouseButtonState.Pressed)
                 this.DragMove();
         }
-        
-        private void Btn_NewProject_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Btn_AddNote_Click(object sender, RoutedEventArgs e)
         {
@@ -79,7 +74,8 @@ namespace ProjectManager
 
         private void Btn_ListView_Meetings_Click(object sender, RoutedEventArgs e)
         {
-
+            Binding Field1Name = new Binding("ABC");
+            ListView_Main.SetBinding(GridViewColumnHeader.ContentProperty, Field1Name);
         }
 
         private void Btn_ListView_ToDo_Click(object sender, RoutedEventArgs e)
@@ -92,5 +88,12 @@ namespace ProjectManager
 
         }
 
+        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
+        {
+            string newProject = ProjectTextBox.Text;
+            ProjectsListBox.Items.Add(newProject);
+            string sql = $"INSERT INTO projects (name) VALUES ('{newProject}')";
+            Database.RunSQL(sql);
+        }
     }
 }
