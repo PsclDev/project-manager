@@ -1,0 +1,171 @@
+11:04:2019 10:21:56.635     -     Database.RunSQL     -     code = Busy (5), message = System.Data.SQLite.SQLiteException (0x800007AF): database is locked
+database is locked
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 10:23:31.415     -     Database.RunSQL     -     code = Busy (5), message = System.Data.SQLite.SQLiteException (0x800007AF): database is locked
+database is locked
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 10:23:59.002     -     Database.RunSQL     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 10:31:24.294     -     Database.RunSQL     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 19:53:11.231     -     Database.RunSQL     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 19:53:54.405     -     Database.RunSQL     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 19:53:58.025     -     Database.RunSQL     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 19:54:01.039     -     Database.RunSQL     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 39.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:16.879     -     MainWindow.BtnAddProjects_Click     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 37.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:47.815     -     MainWindow.BtnAddProjects_Click     -     code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x800027AF): constraint failed
+UNIQUE constraint failed: Projects.name
+   bei System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 37.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:51.079     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:53.814     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:55.108     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:55.366     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:55.540     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:55.712     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:55.869     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:56.046     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 19:55:56.292     -     MainWindow.BtnAddProjects_Click     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 34.
+   bei ProjectManager.MainWindow.BtnAddProjects_Click(Object sender, RoutedEventArgs e) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\MainWindow.xaml.cs:Zeile 123.
+---------------------------------------------------------------------------------------
+11:04:2019 20:02:02.256     -     Database.RunSQL     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 36.
+---------------------------------------------------------------------------------------
+11:04:2019 20:02:06.924     -     Database.RunSQL     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 36.
+---------------------------------------------------------------------------------------
+11:04:2019 20:03:54.950     -     Database.RunSQL     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 36.
+---------------------------------------------------------------------------------------
+11:04:2019 20:05:10.277     -     Database.RunSQL     -     System.InvalidOperationException: Der Vorgang ist aufgrund des aktuellen Zustands des Objekts ungültig.
+   bei System.Data.SQLite.SQLiteConnection.Open()
+   bei ProjectManager.Database.RunSQL(String sql) in C:\Users\Pascal\Documents\GitKraken\Schulprojekte\Project-Manager\ProjectManager\Classes\Database.cs:Zeile 36.
+---------------------------------------------------------------------------------------

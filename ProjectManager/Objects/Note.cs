@@ -8,7 +8,7 @@ namespace ProjectManager
 {
     public class Note : Property
     {
-        public Note(int id, string text) : base(id, text)
+        public Note(int id, string title, string body) : base(id, title, body)
         {
 
         }

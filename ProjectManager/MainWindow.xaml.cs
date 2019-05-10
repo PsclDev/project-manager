@@ -47,53 +47,124 @@ namespace ProjectManager
                 this.DragMove();
         }
 
+        private void RunSQL(string SQL)
+        {
+            try
+            {
+                Database.RunSQL(SQL);
+                TxtBx_Name.Background = Brushes.White;
+                TxtBx_Name.Text = "";
+            }
+            catch (Exception exc)
+            {
+                CstmMsgBx.Error(exc.ToString());
+                Log.Error(Log.GetMethodName(), exc.ToString());
+            }
+        }
+
+        private void BtnAddProjects_Click(object sender, RoutedEventArgs e)
+        {
+            if (TxtBx_Name.Text == "")
+                MissingValue("Bitte tragen Sie ein Projektnamen ein");
+            else
+            {
+                //RunSQL($"INSERT INTO Projects (name) VALUES ('{TxtBx_Name.Name}')");
+                Project project = new Project
+                {
+                    Name = TxtBx_Name.Text
+                };
+
+                ListView_Projects.Items.Add(project);
+            }
+        }
+
         private void Btn_AddNote_Click(object sender, RoutedEventArgs e)
         {
+            if (TxtBx_Name.Text == "")
+                MissingValue("Bitte tragen Sie einen Titel ein");
+            else
+            {
+                if (ListView_Projects.SelectedIndex != -1)
+                {
+                    //RunSQL($"INSERT INTO Notes (title) VALUES ('{TxtBx_Name.Name}')");
+                    Objects.MyTreeViewItem art = new Objects.MyTreeViewItem();
+                    art.Header = TxtBx_Name.Text;
+                    art.Index = 1;
 
+                    Objects.MyTreeViewItem prt = new Objects.MyTreeViewItem();
+                    prt.Header = TxtBx_Name.Text;
+                    prt.Index = 2;
+
+                    TreeView_Note.Items.Add(art);
+                }
+                else
+                    CstmMsgBx.Error("Es wurde kein Projekt ausgewählt");
+            }
         }
 
         private void Btn_AddToDo_Click(object sender, RoutedEventArgs e)
         {
-
+            if (TxtBx_Name.Text == "")
+                MissingValue("Bitte tragen Sie einen Titel ein");
+            else
+            {
+                if (ListView_Projects.SelectedIndex != -1)
+                {
+                    //RunSQL($"INSERT INTO ToDo (title) VALUES ('{TxtBx_Name.Name}')");
+                    TreeView_ToDo.Items.Add(TxtBx_Name.Text);
+                }
+                else
+                    CstmMsgBx.Error("Es wurde kein Projekt ausgewählt");
+            }
         }
 
         private void Btn_AddMeeting_Click(object sender, RoutedEventArgs e)
         {
-
+            if (TxtBx_Name.Text == "")
+                MissingValue("Bitte tragen Sie einen Titel ein");
+            else
+            {
+                if (ListView_Projects.SelectedIndex != -1)
+                {
+                    //RunSQL($"INSERT INTO Notes (title) VALUES ('{TxtBx_Name.Name}')");
+                    TreeView_Meetings.Items.Add(TxtBx_Name.Text);
+                }
+                else
+                    CstmMsgBx.Error("Es wurde kein Projekt ausgewählt");
+            }
         }
 
-        private void Btn_Save_Click(object sender, RoutedEventArgs e)
+        private void MissingValue(string message)
+        {
+            CstmMsgBx.Error(message);
+            TxtBx_Name.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#ff3232");
+        }
+
+        private void Btn_Export_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Btn_Load_Click(object sender, RoutedEventArgs e)
+        private void Btn_Import_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Btn_ListView_Meetings_Click(object sender, RoutedEventArgs e)
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            Binding Field1Name = new Binding("ABC");
-            ListView_Main.SetBinding(GridViewColumnHeader.ContentProperty, Field1Name);
+            var name = TreeView.SelectedItem.ToString();
+
+            CstmMsgBx.Show(name.ToString());
         }
 
-        private void Btn_ListView_ToDo_Click(object sender, RoutedEventArgs e)
+        private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
+            Objects.MyTreeViewItem selectedItem = e.NewValue as Objects.MyTreeViewItem;
+            if (selectedItem != null)
+            {
+                MessageBox.Show("" + selectedItem.Index);
 
-        }
-
-        private void Btn_ListView_Notes_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
-        {
-            string newProject = ProjectTextBox.Text;
-            ProjectsListBox.Items.Add(newProject);
-            string sql = $"INSERT INTO projects (name) VALUES ('{newProject}')";
-            Database.RunSQL(sql);
+            }
         }
     }
 }

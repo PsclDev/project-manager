@@ -8,7 +8,7 @@ namespace ProjectManager
     {
         private static System.Windows.Forms.Timer Timer = new System.Windows.Forms.Timer();
 
-        public static void Show(string Text, int Interval = 2250)
+        public static void Show(string Text, string HexColor = "#C7EA46", int Interval = 2250)
         {
             try
             {
@@ -20,7 +20,7 @@ namespace ProjectManager
                         Timer.Interval = Interval;
                         Timer.Start();
                         (window as MainWindow).Snackbar_MessageBox.IsActive = true;
-                        (window as MainWindow).Snackbar_MessageBox.Background = new BrushConverter().ConvertFromString("#C7EA46") as SolidColorBrush;
+                        (window as MainWindow).Snackbar_MessageBox.Background = new BrushConverter().ConvertFromString(HexColor) as SolidColorBrush;
                         (window as MainWindow).Snackbar_MessageBox.Foreground = Brushes.Black;
                         (window as MainWindow).SnackbarMessage.Content = Text;
                     }

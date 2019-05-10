@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Objects\Meeting.cs" />
+    <Compile Include="Objects\MyTreeViewItem.cs" />
     <Compile Include="Objects\Note.cs" />
     <Compile Include="Objects\Project.cs" />
     <Compile Include="Objects\Property.cs" />

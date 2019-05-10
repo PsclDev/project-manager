@@ -24,88 +24,55 @@
                 <Button x:Name="Btn_TestDatabaseConnection" Margin="0 0 50 0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="35" Padding="0" Click="Btn_TestDatabaseConnection_Click">
                     <materialDesign:PackIcon Kind="DatabaseSearch" Height="25" Width="25"/>
                 </Button>
+                <Button x:Name="Btn_Import" Margin="0 0 100 0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="35" Padding="0" Click="Btn_Import_Click">
+                    <materialDesign:PackIcon Kind="CalendarImport" Height="25" Width="25"/>
+                </Button>
+                <Button x:Name="Btn_Export" Margin="0 0 150 0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="35" Padding="0" Click="Btn_Export_Click">
+                    <materialDesign:PackIcon Kind="CalendarExport" Height="25" Width="25"/>
+                </Button>
             </Grid>
 
-            <StackPanel Height="50" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center">           
+            <StackPanel Height="50" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="Btn_AddNote" Content="Add Note" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_AddNote_Click"/>
                 <Button x:Name="Btn_AddToDo" Content="Add ToDo" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_AddToDo_Click"/>
                 <Button x:Name="Btn_AddMeeting" Content="Add Meeting" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_AddMeeting_Click"/>
-                <Button x:Name="Btn_Save" Content="Save" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_Save_Click"/>
-                <Button x:Name="Btn_Load" Content="Load" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="150" Background="White" Click="Btn_Load_Click"/>
+                <TextBox x:Name="TxtBx_Name" Foreground="Black" FontFamily="Raleway" Margin="15 0 0 0" Height="30" Width="315" Background="White" FontSize="20" MaxLength="30"/>
             </StackPanel>
 
             <Grid Height="20"/>
 
             <Grid Height="500">
                 <StackPanel Orientation="Horizontal">
-                    <Grid Margin="15 0 0 0" Width="215">
-                        <materialDesign:DialogHost DialogClosing="DialogHost_DialogClosing" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <materialDesign:DialogHost.DialogContent>
-                                <StackPanel Margin="16">
-                                    <TextBlock>
-                                        Add a new Project.
-                                    </TextBlock>
-                                    <TextBox Margin="0 8 0 0" HorizontalAlignment="Stretch" x:Name="ProjectTextBox" />
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                        <Button Style="{StaticResource MaterialDesignFlatButton}" IsDefault="True" Margin="0 8 8 0" Command="materialDesign:DialogHost.CloseDialogCommand">
-                                            <Button.CommandParameter>
-                                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
-                                                    True
-                                                </system:Boolean>
-                                            </Button.CommandParameter>
-                                            ACCEPT
-                                        </Button>
-                                        <Button Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True" Margin="0 8 8 0" Command="materialDesign:DialogHost.CloseDialogCommand">
-                                            <Button.CommandParameter>
-                                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
-                                                    False
-                                                </system:Boolean>
-                                            </Button.CommandParameter>
-                                            CANCEL
-                                        </Button>
-                                    </StackPanel>
-                                </StackPanel>
-                            </materialDesign:DialogHost.DialogContent>
-                            <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueMidBrush}" MinWidth="215" MinHeight="500" ClipToBounds="True">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <ListBox x:Name="ProjectsListBox">
-                                    </ListBox>
-                                    <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
-                                        <TextBlock Margin="16" Text="Projects"/>
-                                    </materialDesign:ColorZone>
-                                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
-                                        <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" Foreground="White"/>
-                                    </Button>
-                                </Grid>
-                            </Border>
-                        </materialDesign:DialogHost>
+                    <Grid Margin="15 -20 0 0" Width="215">
+                        <ListView x:Name="ListView_Projects" Margin="5 0 5 5" Height="450">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Projects"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Button x:Name="BtnAddProjects" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BtnAddProjects_Click">
+                            <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
+                        </Button>
                     </Grid>
 
                     <Grid Margin="15 0 0 0" Width="820">
-                        <StackPanel>
-                            <StackPanel Orientation="Horizontal" Height="30">
-                                <Button x:Name="Btn_ListView_Notes" Content="Notes" Foreground="Black" FontFamily="Raleway" FontSize="10" Margin="15 0 0 0" Height="20" Width="100" Background="White" Click="Btn_ListView_Notes_Click"/>
-                                <Button x:Name="Btn_ListView_ToDo" Content="ToDo" Foreground="Black" FontFamily="Raleway" FontSize="10" Margin="15 0 0 0" Height="20" Width="100" Background="White" Click="Btn_ListView_ToDo_Click"/>
-                                <Button x:Name="Btn_ListView_Meetings" Content="Meetings" Foreground="Black" FontFamily="Raleway" FontSize="10" Margin="15 0 0 0" Height="20" Width="100" Background="White" Click="Btn_ListView_Meetings_Click"/>
-                            </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TreeView x:Name="TreeView" Width="175" SelectedItemChanged="TreeView_SelectedItemChanged">
+                                <TreeViewItem x:Name="TreeView_Note" Header="Note" IsExpanded="False">
+                                    
+                                </TreeViewItem>
+                                <TreeViewItem x:Name="TreeView_Meetings" Header="Meetings" IsExpanded="False">
+                 
+                                </TreeViewItem>
+                                <TreeViewItem x:Name="TreeView_ToDo" Header="ToDo" IsExpanded="False">
+                 
+                                </TreeViewItem>
+                            </TreeView>
 
-                            <ListView x:Name="ListView_Main" Margin="10" Height="450">
-                                <ListView.View>
-                                    <GridView x:Name="GridView_Main">
-                                        <GridViewColumn x:Name="GridViewColumnField1" DisplayMemberBinding="{Binding OldName}" Width="400">
-                                            <GridViewColumnHeader Content="{Binding Path=Field1Name}"/>
-                                        </GridViewColumn>
-
-                                        <GridViewColumn x:Name="GridViewColumnField2" DisplayMemberBinding="{Binding NewName}" Width="400">
-                                            <GridViewColumnHeader Content="{Binding Field2Name}"/>
-                                        </GridViewColumn>
-                                    </GridView>
-                                </ListView.View>
-                            </ListView>
+                            <Grid Margin="15 0 0 0" Width="630">
+                                <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Height="490" FontSize="15" FontWeight="Bold" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" LostFocus="TextBox_LostFocus"/>                            
+                            </Grid>
                         </StackPanel>
                     </Grid>
                 </StackPanel>

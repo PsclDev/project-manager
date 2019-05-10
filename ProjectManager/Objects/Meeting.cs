@@ -8,7 +8,7 @@ namespace ProjectManager
 {
     public class Meeting : Property
     {
-        public Meeting(int id, string text) : base(id, text)
+        public Meeting(int id, string title, string body) : base(id, title, body)
         {
 
         }

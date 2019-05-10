@@ -15,7 +15,7 @@ namespace ProjectManager
             {
                 db_connect.Open();
                 db_connect.Close();
-                CstmMsgBx.Show("Database connect successfully", 4000);
+                CstmMsgBx.Show("Database connect successfully");
             }
             catch (Exception exc)
             {
@@ -39,8 +39,17 @@ namespace ProjectManager
                 command.ExecuteNonQuery();
                 db_connect.Close();
             }
+            catch (SQLiteException a)
+            {
+                if (a.ErrorCode == 2067)
+                {
+                    CstmMsgBx.Error("Name ist bereits vergeben");
+                    CheckConnectionStatus();
+                }
+            }
             catch (Exception exc)
             {
+                CstmMsgBx.Error(exc.ToString());
                 Log.Error(Log.GetMethodName(), exc.ToString());
                 CheckConnectionStatus();
             }
